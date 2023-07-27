@@ -1,0 +1,36 @@
+Xft.rgba: none
+!
+!os: gentoo Linux
+!date: 2023-04-09Sun
+!location: gzu, 1021
+!screen-size: hp V220
+!
+xterm*faceName: DejaVuSansMono
+xterm*faceSize: 7
+!xterm*geometry: 80x24
+!
+!Alt key seems not work in xterm.
+!Alt is important for Emacs.
+!How to make Alt key work in Emacs?
+XTerm*eightBitInput: false
+Xterm*eightBitOutput: true
+!
+!date: 2023-07-04Tue
+!file: .Xresources
+!question: Facelifting XClock while using Xrender: A long and winding road
+!usage: $ xrdb -merge ~/.Xresources && xclock &
+!version: 1
+XClock*foreground: #fbfbfb
+XClock*background: #000018
+XClock*update: 1
+XClock*geometry:          210x210+1020+12
+XClock.Clock.majorColor:  rgba:f0/f0/19/7b
+XClock.Clock.minorColor:  rgba:a0/c0/f0/c0
+XClock.Clock.hourColor:   rgba:c9/66/11/72
+XClock.Clock.minuteColor: rgba:00/82/9f/72
+XClock.Clock.secondColor: rgba:50/93/30/6f
+!!!!
+!
+!date: 2026-07-27Thur
+!effects: added from home setting
+XTerm*metaSendsEscape: true

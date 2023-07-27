@@ -1,0 +1,62 @@
+#---------------------------------------
+# http://custompc.plus.com/twm/twmrc.htm
+#----------------------------------------
+Color
+{
+#BorderColor         "#303639"
+#DefaultBackground   "White"
+#DefaultForeground   "Black"
+
+#TitleBackground     "Firebrick"
+#TitleForeground     "White"
+
+#MenuTitleBackground "Firebrick"
+#MenuTitleForeground "White"
+
+#MenuBackground      "#FFFFFF"
+#MenuForeground      "#303639"
+
+#MenuShadowColor     "#303639"
+#MenuBorderColor     "#303639"
+}
+# xv ~/.twm/walls/reduxbg.jpg -root -quit
+
+#----------------------------------------
+# Mouse settings and Window beahviours ------------------------------------------
+#
+# Button1=left, Button2=middle, Button3=right, m=alt, c=ctrl, s=shift
+
+# The root window actions i.e. clicking on the backgound
+#Button1 = : root : f.menu "RootMenu"
+#Button2 = : root : f.menu "System"
+#Button3 = : root : f.menu "TwmWindows"
+
+# Left click the window title to lower / raise + gain focus or move
+#Movedelta 1
+#Button1=	:title: f.function "raise-lower-move"
+#Function "raise-lower-move" { f.move f.raiselower }
+
+# Middle click the window title for options for individual windows
+#Button2 = : title|frame : f.menu "WindowMenu"
+
+# Right click window title to resize the window by mousing beyond frame
+#Button3 = : title|frame : f.resize
+
+# Hold alt key and left click to move entire window
+#Button1 = m : window : f.move
+
+# Hold shift key and right click / move to resize. Best near edges than centre.
+#Button3 = s : window : f.resize
+
+# Hold Alt and Tab cycles through windows bringing up focus
+Function "winup" { f.circleup }
+"Tab" = m : root|window|frame|title : f.function "winup"
+
+# Hold Alt plus left click window title to maximize window vertically
+Button1 = m : title|frame : f.zoom
+
+# Hold Alt plus right click window title to maximize window horizontally
+Button3 = m : title|frame : f.horizoom
+
+DefaultFunction f.nop
+# -------------------------------------------------------------------------------
